@@ -1,0 +1,49 @@
+﻿<p>The LESS Theme Builder helpers for BundleTransformer are designed to allow you to easily add static and dynamic themes to your ASP.Net MVC projects.</p>
+
+    <h2>Creating a ThemeBuilder</h2>
+    <p>Theme builders are simple classes that inject LESS variables into the global variable property of the Bunlde Transformer LESS Translator.</p>
+    <p>By inheriting from the included class <code>ThemeBuilder</code> we can create a simple theme builder. </p>
+    <pre>
+using System.Web.Optimization;
+
+public class ExampleThemeBuilder : ThemeBuilder
+{
+    public override string GetThemeVariables(BundleContext context)
+    {
+        return string.Format("themeColour={0}", "#999");
+    }
+}
+</pre>
+
+    <h2>Static Usage</h2>
+    <p>There is a helper method to allow static theme files to be added to the <code>BundleCollection</code> during the application start up cycle.</p>
+    <pre>
+using System.Web.Optimization
+public class BundleConfig
+{
+    public static void RegisterBundles(BundleCollection bundles)
+    {
+        // Code simplified for brevity...
+        bundles.AddThemeBundle("~/bundles/css", new string[] { "~/content/theme.less" }, new ExampleThemeBuilder());
+    }
+}
+</pre><h2>Dynamic Usage</h2>
+    <p>For situations when you need to generate themes dynamically, for example in multi-tenant mvc applications where the available themes are not known at compile time, we can include an action that returns a <code>ThemeBundleResult</code> as follows.</p>
+    <pre>
+public class AssetsController : Controller
+{
+    private static readonly string[] ThemeFiles = {"~/Content/less/theme.less"};
+
+    [Route("bundles/css/{id}")]
+    public ThemeBundleResult Theme(string id)
+    {
+        // Validate theme id at this point.
+        if (id != "theme")
+            throw new ArgumentOutOfRangeException("id","Invalid theme");
+
+        var themeVirtualPath = string.Format("~/bundles/css/{0}", id);
+
+        return new ThemeBundleResult(themeVirtualPath, ThemeFiles, new ExampleThemeBuilder());
+    }
+}
+</pre>

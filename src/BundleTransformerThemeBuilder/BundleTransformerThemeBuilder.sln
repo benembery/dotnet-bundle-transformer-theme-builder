@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeBuilderHelpers", "ThemeBuilderHelpers\ThemeBuilderHelpers.csproj", "{DA73A9FD-59F7-485F-B049-691BB05A91C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeBuilderHelpers.Web.Tests", "ThemeBuilderHelpers.Web.Tests\ThemeBuilderHelpers.Web.Tests.csproj", "{FD45E9A7-23B1-40B5-B457-CA537C5E2977}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA73A9FD-59F7-485F-B049-691BB05A91C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA73A9FD-59F7-485F-B049-691BB05A91C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA73A9FD-59F7-485F-B049-691BB05A91C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA73A9FD-59F7-485F-B049-691BB05A91C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD45E9A7-23B1-40B5-B457-CA537C5E2977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD45E9A7-23B1-40B5-B457-CA537C5E2977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD45E9A7-23B1-40B5-B457-CA537C5E2977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD45E9A7-23B1-40B5-B457-CA537C5E2977}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

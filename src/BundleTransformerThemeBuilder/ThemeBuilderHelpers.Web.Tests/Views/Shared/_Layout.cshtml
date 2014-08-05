@@ -1,0 +1,29 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Builder Exmaple</title>
+    @Styles.Render("~/bundles/css")
+    @Styles.Render("~/bundles/css/theme")
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Bundle Transformer LESS Theme Bundles</h1>
+            <a class="btn">View on GitHub</a>
+        </div>
+    </header>
+    <div class="container">
+
+        @RenderBody()
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Ben Embery 2014</p>
+        </div>
+    </footer>
+</body>
+</html>
