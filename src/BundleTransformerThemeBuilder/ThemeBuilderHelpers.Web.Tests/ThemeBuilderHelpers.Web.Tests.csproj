@@ -154,6 +154,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Content\less\theme.less" />
     <Content Include="Views\Home\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\bundletransformer-theme-builder - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\bundletransformer-theme-builder - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
