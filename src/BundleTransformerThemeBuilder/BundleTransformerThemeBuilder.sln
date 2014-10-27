@@ -5,6 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeBuilderHelpers", "Them
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeBuilderHelpers.Web.Tests", "ThemeBuilderHelpers.Web.Tests\ThemeBuilderHelpers.Web.Tests.csproj", "{FD45E9A7-23B1-40B5-B457-CA537C5E2977}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuspec", "nuspec", "{92CD445A-9F6E-46C4-8171-FE03B3EAB0F2}"
+	ProjectSection(SolutionItems) = preProject
+		nuspec\NuGet.exe = nuspec\NuGet.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
